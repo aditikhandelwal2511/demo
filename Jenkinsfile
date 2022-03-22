@@ -26,9 +26,6 @@ pipeline {
         echo 'Deploying....'
       }
     }
-    stage('archival') {
-step([$class: 'JUnitResultArchiver', allowEmptyResults: true, testResults: 'target\\surefire-reports\\TEST-*.xml'])
-archiveArtifacts allowEmptyArchive: true, artifacts: 'target\\*.jar', followSymlinks: false, onlyIfSuccessful: true
-}
+   
   }
 }
