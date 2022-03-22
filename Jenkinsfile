@@ -11,7 +11,7 @@ pipeline {
       steps {
         parallel(
           "Test": {
-            echo 'Testing..'
+            echo 'Tessting..'
           },
           "Integration Test": {
             echo 'Integration Test...'
